@@ -51,6 +51,11 @@ if (mobileMenuToggle && mobileSidebar) {
 // Add smooth scrolling for mobile navigation links
 mobileNavLinks.forEach((link) => {
   link.addEventListener("click", function (e) {
+    // Don't prevent default for external links (with target="_blank")
+    if (this.getAttribute("target") === "_blank") {
+      return; // Allow default behavior for external links
+    }
+
     e.preventDefault();
 
     // Add active state
@@ -78,16 +83,6 @@ mobileNavLinks.forEach((link) => {
         }
         break;
 
-      case "THỰC ĐƠN":
-        const productsSection = document.querySelector(".products-section");
-        if (productsSection) {
-          productsSection.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
-        }
-        break;
-
       case "THƯ VIỆN":
         window.location.href = "image.html";
         break;
@@ -105,6 +100,11 @@ mobileNavLinks.forEach((link) => {
 // Add smooth scrolling for navigation links
 navLinks.forEach((link) => {
   link.addEventListener("click", function (e) {
+    // Don't prevent default for external links (with target="_blank")
+    if (this.getAttribute("target") === "_blank") {
+      return; // Allow default behavior for external links
+    }
+
     e.preventDefault();
 
     // Add active state
@@ -131,17 +131,6 @@ navLinks.forEach((link) => {
         const aboutSection = document.querySelector(".about-section");
         if (aboutSection) {
           aboutSection.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
-        }
-        break;
-
-      case "THỰC ĐƠN":
-        // Scroll to products section
-        const productsSection = document.querySelector(".products-section");
-        if (productsSection) {
-          productsSection.scrollIntoView({
             behavior: "smooth",
             block: "start",
           });
@@ -592,32 +581,6 @@ function handleHashNavigation() {
         const aboutSection = document.querySelector(".about-section");
         if (aboutSection) {
           aboutSection.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
-        }
-      }, 100);
-      break;
-
-    case "#products-section":
-      // Set "THỰC ĐƠN" as active
-      navLinks.forEach((link) => {
-        if (link.textContent.trim() === "THỰC ĐƠN") {
-          link.classList.add("active");
-        }
-      });
-
-      mobileNavLinks.forEach((link) => {
-        if (link.textContent.trim() === "THỰC ĐƠN") {
-          link.classList.add("active");
-        }
-      });
-
-      // Scroll to products section
-      setTimeout(() => {
-        const productsSection = document.querySelector(".products-section");
-        if (productsSection) {
-          productsSection.scrollIntoView({
             behavior: "smooth",
             block: "start",
           });

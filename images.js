@@ -72,7 +72,8 @@ mobileNavLinks.forEach((link) => {
         break;
 
       case "THỰC ĐƠN":
-        window.location.href = "index.html#products-section";
+        window.location.href =
+          "https://www.canva.com/design/DAGnB59DUGE/BE8lxMJkZKrU-YQXcEHylQ/view?utm_content=DAGnB59DUGE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h2d1a61597c";
         break;
 
       case "THƯ VIỆN":
@@ -120,7 +121,8 @@ navLinks.forEach((link) => {
 
       case "THỰC ĐƠN":
         // Navigate to index.html and scroll to products section
-        window.location.href = "index.html#products-section";
+        window.location.href =
+          "https://www.canva.com/design/DAGnB59DUGE/BE8lxMJkZKrU-YQXcEHylQ/view?utm_content=DAGnB59DUGE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h2d1a61597c";
         break;
 
       case "THƯ VIỆN":
