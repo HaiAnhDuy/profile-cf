@@ -83,9 +83,9 @@ mobileNavLinks.forEach((link) => {
         }
         break;
 
-      case "THƯ VIỆN":
-        window.location.href = "image.html";
-        break;
+      // case "THƯ VIỆN":
+      //   window.location.href = "image.html";
+      //   break;
 
       case "LIÊN HỆ":
         window.location.href = "contact.html";
@@ -137,10 +137,10 @@ navLinks.forEach((link) => {
         }
         break;
 
-      case "THƯ VIỆN":
-        // Navigate to image gallery page
-        window.location.href = "image.html";
-        break;
+      // case "THƯ VIỆN":
+      //   // Navigate to image gallery page
+      //   window.location.href = "image.html";
+      //   break;
 
       case "LIÊN HỆ":
         // Navigate to contact page
@@ -157,6 +157,15 @@ navLinks.forEach((link) => {
 const mobileNavButton = document.querySelector(".mobile-nav-button");
 if (mobileNavButton) {
   mobileNavButton.addEventListener("click", function (e) {
+    // Don't prevent default for external links (with target="_blank")
+    if (this.getAttribute("target") === "_blank") {
+      // Close sidebar before opening external link
+      mobileMenuToggle.classList.remove("active");
+      mobileSidebar.classList.remove("active");
+      document.body.style.overflow = "";
+      return; // Allow default behavior for external links
+    }
+
     e.preventDefault();
 
     // Close sidebar
@@ -179,6 +188,11 @@ if (mobileNavButton) {
 [navButton, heroButton].forEach((button) => {
   if (button) {
     button.addEventListener("click", function (e) {
+      // Don't prevent default for external links (navButton with target="_blank")
+      if (this.getAttribute("target") === "_blank") {
+        return; // Allow default behavior for external links
+      }
+
       e.preventDefault();
 
       // Add ripple effect
@@ -197,16 +211,6 @@ if (mobileNavButton) {
         const aboutSection = document.querySelector(".about-section");
         if (aboutSection) {
           aboutSection.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
-        }
-      } else if (this === navButton) {
-        console.log("Order button clicked");
-        // Scroll to products section for ordering
-        const productsSection = document.querySelector(".products-section");
-        if (productsSection) {
-          productsSection.scrollIntoView({
             behavior: "smooth",
             block: "start",
           });

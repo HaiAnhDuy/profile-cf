@@ -76,9 +76,9 @@ mobileNavLinks.forEach((link) => {
           "https://www.canva.com/design/DAGnB59DUGE/BE8lxMJkZKrU-YQXcEHylQ/view?utm_content=DAGnB59DUGE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h2d1a61597c";
         break;
 
-      case "THƯ VIỆN":
-        window.location.href = "image.html";
-        break;
+      // case "THƯ VIỆN":
+      //   window.location.href = "image.html";
+      //   break;
 
       case "LIÊN HỆ":
         window.location.href = "contact.html";
@@ -125,10 +125,10 @@ navLinks.forEach((link) => {
           "https://www.canva.com/design/DAGnB59DUGE/BE8lxMJkZKrU-YQXcEHylQ/view?utm_content=DAGnB59DUGE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h2d1a61597c";
         break;
 
-      case "THƯ VIỆN":
-        // Navigate to image gallery page
-        window.location.href = "image.html";
-        break;
+      // case "THƯ VIỆN":
+      //   // Navigate to image gallery page
+      //   window.location.href = "image.html";
+      //   break;
 
       case "LIÊN HỆ":
         // Navigate to contact page
